@@ -10,20 +10,13 @@ import UIKit
 
 
 
-extension ProductViewController: UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating {
+extension ProductViewController: UISearchBarDelegate, UISearchControllerDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar)  {
         print("SEARCH")
+        print(searchBar.text)
     }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        print("CANCEL")
-    }
-    
-    func updateSearchResults(for searchController: UISearchController) {
-        print("UPDATE")
-        searchController.searchBar.setShowsCancelButton(true, animated: true)
-    }
+
 }
 
 

@@ -26,34 +26,37 @@ class ProductViewController: UIViewController{
         let textAttributes = [NSAttributedStringKey.foregroundColor:#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         navigationItem.title = "Liverpool"
+
+
         
         if #available(iOS 11.0, *) {
             let sc = UISearchController(searchResultsController: nil)
             sc.delegate = self
+//            sc.searchResultsUpdater = self
+            sc.searchBar.delegate = self
             let scb = sc.searchBar
             scb.tintColor = UIColor.white
             scb.barTintColor = UIColor.white
-            
+
             if let textfield = scb.value(forKey: "searchField") as? UITextField {
                 if let backgroundview = textfield.subviews.first {
-                    
+
                     // Background color
                     backgroundview.backgroundColor = UIColor.white
-                    
+
                     // Rounded corner
                     backgroundview.layer.cornerRadius = 10;
                     backgroundview.clipsToBounds = true;
                 }
             }
             
+            sc.obscuresBackgroundDuringPresentation = false
+            sc.hidesNavigationBarDuringPresentation = false
+            sc.searchBar.placeholder = "Search Products"
+            
             navigationItem.searchController = sc
             navigationItem.hidesSearchBarWhenScrolling = false
         }
-        
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.hidesNavigationBarDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Products"
     }
     
 }
