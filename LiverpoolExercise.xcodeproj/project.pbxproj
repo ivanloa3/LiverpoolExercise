@@ -18,6 +18,7 @@
 		7AA15793212A522D00F23B51 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA15792212A522D00F23B51 /* ProductModel.swift */; };
 		7AA15795212A537800F23B51 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA15794212A537800F23B51 /* Service.swift */; };
 		7AA15797212A53FA00F23B51 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA15796212A53FA00F23B51 /* ProductTableViewCell.swift */; };
+		7AA1579A212A599600F23B51 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA15799212A599600F23B51 /* ProductViewModel.swift */; };
 		7AD64976212A46770040D031 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD64975212A46770040D031 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		7AA15792212A522D00F23B51 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		7AA15794212A537800F23B51 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		7AA15796212A53FA00F23B51 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		7AA15799212A599600F23B51 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		7AD64973212A461B0040D031 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD64975212A46770040D031 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -116,6 +118,7 @@
 		7AA1578A212A487A00F23B51 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7AA15799212A599600F23B51 /* ProductViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				7A667A33212A4326001D751F /* LiverpoolExercise.xcdatamodeld in Sources */,
 				7A667A2B212A4326001D751F /* AppDelegate.swift in Sources */,
 				7AA15793212A522D00F23B51 /* ProductModel.swift in Sources */,
+				7AA1579A212A599600F23B51 /* ProductViewModel.swift in Sources */,
 				7AA15795212A537800F23B51 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

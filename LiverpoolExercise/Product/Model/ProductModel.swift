@@ -10,20 +10,26 @@ import Foundation
 
 class ProductModel{
     
-    var Thumbnail: String!
-    var Title: String!
-    var Price: String!
-    var Location: String!
+    private var Thumbnail: URL!
+    private var Title: String!
+    private var Price: String!
+    private var Location: String!
     
-    init(thumbnail: String, title: String, price: String, location: String) {
+    init(thumbnail: URL, title: String, price: String, location: String) {
         self.Thumbnail = thumbnail
         self.Title = title
         self.Price = price
         self.Location = location
     }
     
-    var thumbnail: String{
-        get { return self.Thumbnail }
+    var thumbnail: URL{
+        get {
+            if self.Thumbnail != nil{
+                return self.Thumbnail
+                }else{
+                return URL(fileURLWithPath: "https://is4-ssl.mzstatic.com/image/thumb/Purple128/v4/7f/fa/85/7ffa858c-2c0b-bbcb-2439-5031d6d21d31/AppIcon-1x_U007emarketing-85-220-0-3.png/246x0w.jpg")
+            }
+        }
         set { self.Thumbnail = newValue }
     }
     

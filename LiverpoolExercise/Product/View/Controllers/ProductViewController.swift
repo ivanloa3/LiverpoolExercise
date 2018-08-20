@@ -12,14 +12,17 @@ class ProductViewController: UIViewController{
     
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var curtainView: UIView!
     
     let searchController = UISearchController(searchResultsController: nil)
+    let productViewModel = ProductViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setupSearchController()
         self.tableView.rowHeight = 120
+        self.tableView.tableFooterView = UIView(frame: .zero)
     }
     
     func setupSearchController(){

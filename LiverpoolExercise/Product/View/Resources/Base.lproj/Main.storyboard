@@ -83,18 +83,41 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="hqh-wX-Nh9"/>
                                 </connections>
                             </tableView>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUa-8x-2Rt">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="nCQ-UW-Gm5">
+                                        <rect key="frame" x="177" y="291" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="5kC-Y7-GA1"/>
+                                            <constraint firstAttribute="height" constant="20" id="sOK-8q-4XH"/>
+                                        </constraints>
+                                        <color key="color" red="0.87450980392156863" green="0.090196078431372548" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="nCQ-UW-Gm5" firstAttribute="centerX" secondItem="aUa-8x-2Rt" secondAttribute="centerX" id="mg1-Dj-ui5"/>
+                                    <constraint firstItem="nCQ-UW-Gm5" firstAttribute="centerY" secondItem="aUa-8x-2Rt" secondAttribute="centerY" id="yCz-MJ-Rbb"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="aUa-8x-2Rt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2wu-5t-qgP"/>
                             <constraint firstItem="den-vk-9cQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6Eh-ov-Yt8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="den-vk-9cQ" secondAttribute="bottom" id="7BL-NA-ruU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aUa-8x-2Rt" secondAttribute="trailing" id="Ixa-JF-g93"/>
                             <constraint firstItem="den-vk-9cQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LMq-zM-ugq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="den-vk-9cQ" secondAttribute="trailing" id="MPd-a1-SPR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aUa-8x-2Rt" secondAttribute="bottom" id="q7B-gR-Tq5"/>
+                            <constraint firstItem="aUa-8x-2Rt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uR5-pY-DGv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="4o2-Bs-hgN"/>
                     <connections>
+                        <outlet property="curtainView" destination="aUa-8x-2Rt" id="uS4-EB-NOD"/>
                         <outlet property="tableView" destination="den-vk-9cQ" id="JGa-d0-Zqe"/>
                     </connections>
                 </viewController>

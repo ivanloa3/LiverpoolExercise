@@ -13,21 +13,26 @@ import UIKit
 extension ProductViewController: UISearchBarDelegate, UISearchControllerDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar)  {
-        print("SEARCH")
-        print(searchBar.text)
+        self.curtainView.alpha = 0.6
+        
+        self.productViewModel.fetchProducts(with: searchBar.text!) {
+            self.curtainView.alpha = 0
+            self.tableView.reloadData()
+        }
     }
 
 }
 
 extension ProductViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        return self.productViewModel.getNumbersOfProducts()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProductTableViewCell
         
-        cell.set(title: "Hola Ivan", price: "$5,000.00", location: "Liverpool Metepec")
+        let product = productViewModel.fetchProduct(at: indexPath.row)
+        cell.set(product: product)
         
         return cell
         

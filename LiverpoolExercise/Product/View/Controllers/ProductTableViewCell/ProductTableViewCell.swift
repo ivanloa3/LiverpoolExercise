@@ -19,7 +19,7 @@ class ProductTableViewCell: UITableViewCell{
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var location: UILabel!
     
-    var delegate : MyServiceDelegate!
+    var delegate : MyServiceDelegate = Service()
     
     func set(image: URL, title: String, price: String, location:String){
         delegate.getImageData(with: image) { (data) in
@@ -37,6 +37,19 @@ class ProductTableViewCell: UITableViewCell{
         self.title.text = title
         self.price.text = price
         self.location.text = location
+    }
+    
+    func set(product: ProductModel){
+
+        delegate.getImageData(with: product.thumbnail) { (data) in
+            DispatchQueue.main.async {
+                self.thumbnail.image = UIImage(data: data)
+                
+                self.title.text = product.title
+                self.price.text = product.price
+                self.location.text = product.location
+            }
+        }
     }
     
 }
