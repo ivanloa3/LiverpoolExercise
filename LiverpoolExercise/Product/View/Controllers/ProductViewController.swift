@@ -10,13 +10,16 @@ import UIKit
 
 class ProductViewController: UIViewController{
     
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setupSearchController()
-        
+        self.tableView.rowHeight = 120
     }
     
     func setupSearchController(){

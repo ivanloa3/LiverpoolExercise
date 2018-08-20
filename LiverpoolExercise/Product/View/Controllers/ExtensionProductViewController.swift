@@ -19,4 +19,19 @@ extension ProductViewController: UISearchBarDelegate, UISearchControllerDelegate
 
 }
 
+extension ProductViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 15
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ProductTableViewCell
+        
+        cell.set(title: "Hola Ivan", price: "$5,000.00", location: "Liverpool Metepec")
+        
+        return cell
+        
+    }
+    
 
+}

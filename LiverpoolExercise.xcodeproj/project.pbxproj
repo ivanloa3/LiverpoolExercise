@@ -16,6 +16,8 @@
 		7AA1578F212A48DE00F23B51 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA1578E212A48DE00F23B51 /* ProductViewController.swift */; };
 		7AA15791212A494900F23B51 /* ExtensionProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA15790212A494900F23B51 /* ExtensionProductViewController.swift */; };
 		7AA15793212A522D00F23B51 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA15792212A522D00F23B51 /* ProductModel.swift */; };
+		7AA15795212A537800F23B51 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA15794212A537800F23B51 /* Service.swift */; };
+		7AA15797212A53FA00F23B51 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA15796212A53FA00F23B51 /* ProductTableViewCell.swift */; };
 		7AD64976212A46770040D031 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD64975212A46770040D031 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		7AA1578E212A48DE00F23B51 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		7AA15790212A494900F23B51 /* ExtensionProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionProductViewController.swift; sourceTree = "<group>"; };
 		7AA15792212A522D00F23B51 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		7AA15794212A537800F23B51 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		7AA15796212A53FA00F23B51 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		7AD64973212A461B0040D031 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AD64975212A46770040D031 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -129,6 +133,7 @@
 			children = (
 				7AA1578E212A48DE00F23B51 /* ProductViewController.swift */,
 				7AA15790212A494900F23B51 /* ExtensionProductViewController.swift */,
+				7AA15798212A53FF00F23B51 /* ProductTableViewCell */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -136,8 +141,17 @@
 		7AA1578D212A48A800F23B51 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7AA15794212A537800F23B51 /* Service.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		7AA15798212A53FF00F23B51 /* ProductTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7AA15796212A53FA00F23B51 /* ProductTableViewCell.swift */,
+			);
+			path = ProductTableViewCell;
 			sourceTree = "<group>";
 		};
 		9CA3A37B32C1D7E4D3F6A144 /* Frameworks */ = {
@@ -291,9 +305,11 @@
 			files = (
 				7AA15791212A494900F23B51 /* ExtensionProductViewController.swift in Sources */,
 				7AA1578F212A48DE00F23B51 /* ProductViewController.swift in Sources */,
+				7AA15797212A53FA00F23B51 /* ProductTableViewCell.swift in Sources */,
 				7A667A33212A4326001D751F /* LiverpoolExercise.xcdatamodeld in Sources */,
 				7A667A2B212A4326001D751F /* AppDelegate.swift in Sources */,
 				7AA15793212A522D00F23B51 /* ProductModel.swift in Sources */,
+				7AA15795212A537800F23B51 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

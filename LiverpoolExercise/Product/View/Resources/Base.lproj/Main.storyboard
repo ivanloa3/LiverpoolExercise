@@ -5,6 +5,8 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,10 +18,85 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="den-vk-9cQ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="120" id="onH-li-6XP" customClass="ProductTableViewCell" customModule="LiverpoolExercise" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="onH-li-6XP" id="yNj-nw-VcR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l2C-FW-nxx">
+                                                    <rect key="frame" x="6.5" y="10" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="Mak-65-mHR"/>
+                                                        <constraint firstAttribute="height" constant="100" id="mxk-Wf-WD5"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7X-Sd-ByT">
+                                                    <rect key="frame" x="121.5" y="24.5" width="223.5" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhe-86-iPO">
+                                                    <rect key="frame" x="121.5" y="44" width="223.5" height="14"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                    <color key="textColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYm-aQ-ygo">
+                                                    <rect key="frame" x="121.5" y="95.5" width="223.5" height="12"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="rYm-aQ-ygo" secondAttribute="trailing" constant="15" id="1pJ-jM-sfT"/>
+                                                <constraint firstItem="rYm-aQ-ygo" firstAttribute="centerY" secondItem="yNj-nw-VcR" secondAttribute="centerY" multiplier="1.7" id="5Cn-N9-1zY"/>
+                                                <constraint firstItem="Bhe-86-iPO" firstAttribute="leading" secondItem="l2C-FW-nxx" secondAttribute="trailing" constant="15" id="9Gc-AN-D6h"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="b7X-Sd-ByT" secondAttribute="trailing" constant="15" id="JVS-mu-Dzb"/>
+                                                <constraint firstItem="b7X-Sd-ByT" firstAttribute="centerY" secondItem="yNj-nw-VcR" secondAttribute="centerY" multiplier="0.55" id="K7e-J9-aSV"/>
+                                                <constraint firstItem="Bhe-86-iPO" firstAttribute="centerY" secondItem="yNj-nw-VcR" secondAttribute="centerY" multiplier="0.85" id="PDI-H6-SMD"/>
+                                                <constraint firstItem="l2C-FW-nxx" firstAttribute="centerY" secondItem="yNj-nw-VcR" secondAttribute="centerY" id="XxC-BB-Oz3"/>
+                                                <constraint firstItem="rYm-aQ-ygo" firstAttribute="leading" secondItem="l2C-FW-nxx" secondAttribute="trailing" constant="15" id="he4-Of-ZKm"/>
+                                                <constraint firstItem="b7X-Sd-ByT" firstAttribute="leading" secondItem="l2C-FW-nxx" secondAttribute="trailing" constant="15" id="jzb-8b-v59"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Bhe-86-iPO" secondAttribute="trailing" constant="15" id="kuW-q5-iCk"/>
+                                                <constraint firstItem="l2C-FW-nxx" firstAttribute="centerX" secondItem="yNj-nw-VcR" secondAttribute="centerX" multiplier="0.3" id="ye9-Jm-yHE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="location" destination="rYm-aQ-ygo" id="4ma-V8-pf5"/>
+                                            <outlet property="price" destination="Bhe-86-iPO" id="uI0-g3-R4M"/>
+                                            <outlet property="thumbnail" destination="l2C-FW-nxx" id="fz3-hu-YaA"/>
+                                            <outlet property="title" destination="b7X-Sd-ByT" id="2g3-5T-u76"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="qKj-hy-jlf"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="hqh-wX-Nh9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="den-vk-9cQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6Eh-ov-Yt8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="den-vk-9cQ" secondAttribute="bottom" id="7BL-NA-ruU"/>
+                            <constraint firstItem="den-vk-9cQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LMq-zM-ugq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="den-vk-9cQ" secondAttribute="trailing" id="MPd-a1-SPR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="4o2-Bs-hgN"/>
+                    <connections>
+                        <outlet property="tableView" destination="den-vk-9cQ" id="JGa-d0-Zqe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
