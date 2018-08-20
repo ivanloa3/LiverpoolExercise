@@ -11,7 +11,9 @@ import UIKit
 class ProductViewController: UIViewController{
     
     
+    @IBOutlet weak var viewSearchTable: UIView!
     @IBOutlet weak var tableView: UITableView!
+    
     @IBOutlet weak var curtainView: UIView!
     
     let searchController = UISearchController(searchResultsController: nil)
@@ -21,8 +23,10 @@ class ProductViewController: UIViewController{
         super.viewDidLoad()
         
         self.setupSearchController()
-        self.tableView.rowHeight = 120
+        self.tableView.rowHeight = 50
         self.tableView.tableFooterView = UIView(frame: .zero)
+        self.productViewModel.updateSearchedProducts()
+        self.tableView.reloadData()
     }
     
     func setupSearchController(){
@@ -30,11 +34,6 @@ class ProductViewController: UIViewController{
         
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.862745098, green: 0.09019607843, blue: 0.5843137255, alpha: 1)
         self.addNavBarImage()
-//        let textAttributes = [NSAttributedStringKey.foregroundColor:#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)]
-//        navigationController?.navigationBar.titleTextAttributes = textAttributes
-//        navigationItem.title = "Liverpool"
-
-
         
         if #available(iOS 11.0, *) {
             let sc = UISearchController(searchResultsController: nil)

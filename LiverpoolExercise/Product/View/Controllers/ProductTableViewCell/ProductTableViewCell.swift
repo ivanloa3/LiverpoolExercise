@@ -21,24 +21,6 @@ class ProductTableViewCell: UITableViewCell{
     
     var delegate : MyServiceDelegate = Service()
     
-    func set(image: URL, title: String, price: String, location:String){
-        delegate.getImageData(with: image) { (data) in
-            DispatchQueue.main.async {
-                self.thumbnail.image = UIImage(data: data)
-                
-                self.title.text = title
-                self.price.text = price
-                self.location.text = location
-            }
-        }
-    }
-    
-    func set(title: String, price: String, location: String){
-        self.title.text = title
-        self.price.text = price
-        self.location.text = location
-    }
-    
     func set(product: ProductModel){
 
         delegate.getImageData(with: product.thumbnail) { (data) in

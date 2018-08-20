@@ -39,7 +39,14 @@ class ProductModel{
     }
     
     var price: String{
-        get { return self.Price }
+        get {
+            let temp = self.Price.split(separator: ".")
+            let formatter = NumberFormatter()
+            formatter.locale = Locale.current
+            formatter.numberStyle = .currency
+            let formattedTipAmount = formatter.string(from: Double(temp[0])! as NSNumber)
+            return "\(formattedTipAmount ?? self.Price!)"
+        }
         set { self.Price = newValue }
     }
     
